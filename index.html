@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для моей любимой ❤️</title>
+<style>
+:root{--wine:#9f2336;--rose:#f7e9e8;--ink:#422b2d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+background:radial-gradient(circle at top,#fff9f4,#f4e2df 65%,#ead0ce);
+font-family:Georgia,'Times New Roman',serif;color:var(--ink)}
+main{width:min(100%,520px);background:#fffdfb;border:1px solid #ead4d0;
+border-radius:26px;padding:34px 26px;text-align:center;box-shadow:0 18px 55px #6d29301c}
+.heart{font-size:34px;color:var(--wine);margin-bottom:8px}
+h1{font-weight:normal;font-size:clamp(30px,7vw,42px);margin:8px 0 12px;color:var(--wine)}
+.subtitle{font-size:17px;line-height:1.65;margin:0 auto 26px;max-width:390px}
+button{border:0;border-radius:999px;background:var(--wine);color:white;padding:15px 25px;
+font-size:16px;font-family:inherit;cursor:pointer;box-shadow:0 7px 18px #9f233633}
+button:hover{filter:brightness(1.08)}
+#video{display:none;margin-top:26px}
+.frame{position:relative;width:100%;padding-top:177.78%;border-radius:16px;overflow:hidden;background:#170e10}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.note{font-size:13px;color:#8a6b6b;margin-top:22px}
+</style>
+</head>
+<body>
+<main>
+  <div class="heart">♥</div>
+  <h1>Для моей любимой</h1>
+  <p class="subtitle">У меня есть кое-что особенное для тебя.<br>Нажми на кнопку — я хочу сказать тебе это лично.</p>
+  <button id="open">Открыть моё послание ❤️</button>
+  <section id="video" aria-live="polite">
+    <p class="subtitle">Это всё — от самого сердца.</p>
+    <div class="frame">
+      <iframe id="player"
+        src=""
+        title="Видео-признание"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+  <p class="note">С любовью, твой муж</p>
+</main>
+<script>
+document.getElementById('open').addEventListener('click',function(){
+  document.getElementById('video').style.display='block';
+  document.getElementById('player').src='https://www.youtube-nocookie.com/embed/Je24coH3dCc?autoplay=1&playsinline=1';
+  this.style.display='none';
+});
+</script>
+</body>
+</html>
